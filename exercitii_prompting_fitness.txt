@@ -1,5 +1,5 @@
 
-SET DE EXERCIȚII – PROMPTING AVANSAT PENTRU FITNESS (12 exerciții)
+SET DE EXERCIȚII – PROMPTING PENTRU FITNESS (10 exerciții)
 ================================================================
 
 INSTRUCȚIUNI OBLIGATORII (pentru TOATE exercițiile):
@@ -25,7 +25,8 @@ Prompt:
 2. ZERO-SHOT PROMPTING + PERSONIFICARE
 ----------------------------------------------------------------
 Scrie un prompt zero-shot în care modelul este personificat ca
-„antrenor personal certificat”, respectând structura cerută.
+„antrenor personal certificat”, respectând structura cerută
+entru un antrenament de forță.
 
 Prompt:
 
@@ -35,22 +36,13 @@ Prompt:
 ----------------------------------------------------------------
 Creează un prompt care include 2 exemple (întrebare + răspuns),
 apoi cere modelului să răspundă la o a treia întrebare,
-folosind context și format de ieșire explicit.
+folosind context și format de ieșire explicit (contextul: fitness).
 
 Prompt:
 
 
 ----------------------------------------------------------------
-4. FEW-SHOT PROMPTING + PERSONIFICARE
-----------------------------------------------------------------
-Construiește un prompt few-shot în care modelul este personificat
-ca „antrenor pentru începători” și trebuie să păstreze stilul.
-
-Prompt:
-
-
-----------------------------------------------------------------
-5. CHAIN OF THOUGHT
+4. CHAIN OF THOUGHT
 ----------------------------------------------------------------
 Scrie un prompt care cere modelului să gândească pas cu pas
 pentru a construi un plan de slăbire, cu format explicit.
@@ -59,7 +51,7 @@ Prompt:
 
 
 ----------------------------------------------------------------
-6. CHAIN OF THOUGHT + PERSONIFICARE
+5. CHAIN OF THOUGHT + PERSONIFICARE
 ----------------------------------------------------------------
 Formulează un prompt în care modelul este personificat ca
 „specialist în fiziologia efortului” și explică raționamentul.
@@ -68,53 +60,45 @@ Prompt:
 
 
 ----------------------------------------------------------------
-7. TREE OF THOUGHT
+6. TREE OF THOUGHT
 ----------------------------------------------------------------
 Creează un prompt care cere explorarea a minimum 3 soluții diferite
-și alegerea celei mai bune, cu justificare.
+pentru un plan de antrenament și alegerea celei mai bune, cu justificare.
 
 Prompt:
 
 
 ----------------------------------------------------------------
-8. TREE OF THOUGHT + PERSONIFICARE
+7. TREE OF THOUGHT + PERSONIFICARE
 ----------------------------------------------------------------
 Scrie un prompt în care modelul este personificat ca
-„consultant fitness” și compară strategii diferite.
+„consultant fitness” ce creaza un plan săptămânal și compară strategii diferite.
 
 Prompt:
 
 
 ----------------------------------------------------------------
-9. META PROMPTING
-----------------------------------------------------------------
-Scrie un prompt în care modelul își definește singur pașii
-pentru a răspunde corect la o cerință fitness.
-
-Prompt:
-
-
-----------------------------------------------------------------
-10. PROMPT CHAINING
+8. PROMPT CHAINING
 ----------------------------------------------------------------
 Construiește un prompt cu două etape clare:
-1) analiză obiectiv fitness
+1) analiză antrenament HIIT
 2) generare plan structurat
 
 Prompt:
 
 
 ----------------------------------------------------------------
-11. REACT (Reason + Act) + PERSONIFICARE
+9. REACT (Reason + Act) + PERSONIFICARE
 ----------------------------------------------------------------
 Scrie un prompt în care modelul explică raționamentul (Reason)
-și propune acțiuni concrete (Act), într-un format clar.
+și propune acțiuni concrete (Act), într-un format clar
+pentru un antrenament săptămânal.
 
 Prompt:
 
 
 ----------------------------------------------------------------
-12. MULTIMODAL PROMPTING + PERSONIFICARE
+10. MULTIMODAL PROMPTING + PERSONIFICARE
 ----------------------------------------------------------------
 Formulează un prompt în care modelul este personificat ca
 „antrenor într-o sală de fitness”, primește o imagine
