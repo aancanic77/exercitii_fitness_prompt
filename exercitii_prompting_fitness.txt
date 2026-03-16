@@ -19,7 +19,33 @@ Scrie un prompt zero-shot pentru generarea unui plan de antrenament de forță
 pentru un adult sănătos, respectând TOATE instrucțiunile obligatorii.
 
 Prompt:
+Prompt Zero‑Shot 
+INSTRUCȚIUNI PENTRU MODEL:  
+Generează un plan de antrenament de forță adaptat cerințelor de mai jos. Răspunsul trebuie să fie concis, structurat și ușor de urmat. Nu inventa date suplimentare despre utilizator și nu include recomandări medicale.
 
+CONTEXT:  
+Utilizatorul este un adult sănătos, fără accidentări, fără experiență avansată în fitness, care dorește un program de antrenament de forță pentru întreținere generală și creșterea tonusului muscular. Dispune de acces la o sală de fitness obișnuită (gantere, haltere, aparate). Are la dispoziție 3 zile pe săptămână, câte 60 de minute per sesiune.
+
+FORMAT DE IEȘIRE:  
+Oferă răspunsul în următoarea structură clară:
+
+1. Obiectivul programului – 2–3 bullet points
+
+2. Principii generale de antrenament – 4–6 bullet points
+
+3. Planul pe zile (Ziua 1, Ziua 2, Ziua 3)
+
+Pentru fiecare zi include:
+
+Grupele musculare vizate
+
+5–6 exerciții
+
+Seturi și repetări recomandate
+
+4. Sugestii de progresie – 3–4 bullet points
+
+5. Recomandări de siguranță – 3 bullet points
 
 ----------------------------------------------------------------
 2. ZERO-SHOT PROMPTING + PERSONIFICARE
@@ -30,7 +56,33 @@ entru un antrenament de forță.
 
 Prompt:
 
+Iată un prompt zero‑shot cu personificare, formulat clar și complet, exact în stilul cerut. Îl poți folosi ca exercițiu sau model pentru propriile tale prompturi.
 
+---
+
+ Prompt Zero‑Shot + Personificare (Exercițiul 2)
+
+INSTRUCȚIUNI PENTRU MODEL:  
+Acționează ca un antrenor personal certificat, cu experiență în lucrul cu adulți sănătoși care doresc să își îmbunătățească forța generală. Oferă explicații clare, profesioniste și ușor de urmat. Nu include recomandări medicale și nu inventa informații despre utilizator în afara celor oferite în context.
+
+CONTEXT:  
+Utilizatorul este un adult sănătos, fără accidentări, cu nivel de experiență începător‑mediu, care dorește un program de antrenament de forță pentru întreținere și dezvoltare musculară. Are acces la o sală complet echipată (gantere, haltere, cabluri, aparate). Poate aloca 3 sesiuni pe săptămână, a câte 60 de minute.
+
+FORMAT DE IEȘIRE:  
+Structura răspunsului trebuie să fie următoarea:
+- 1. Salut și scurtă introducere din perspectiva antrenorului personal – 2–3 fraze  
+- 2. Obiectivele programului – bullet points  
+- 3. Principii de antrenament recomandate – 4–6 bullet points  
+- 4. Planul de antrenament pe zile (Ziua 1, Ziua 2, Ziua 3)  
+  - Grupele musculare vizate  
+  - 5–6 exerciții per zi  
+  - Seturi și repetări recomandate  
+- 5. Sugestii de progresie – bullet points  
+- 6. Recomandări de siguranță și execuție corectă – bullet points  
+
+---
+
+Dacă vrei, pot continua și cu exercițiul 3.
 ----------------------------------------------------------------
 3. FEW-SHOT PROMPTING
 ----------------------------------------------------------------
@@ -39,6 +91,67 @@ apoi cere modelului să răspundă la o a treia întrebare,
 folosind context și format de ieșire explicit (contextul: fitness).
 
 Prompt:
+Iată un prompt few‑shot complet, cu două exemple (întrebare + răspuns) și o a treia întrebare la care modelul trebuie să răspundă, toate în domeniul fitness, cu instrucțiuni clare, context și format de ieșire.
+
+---
+
+ Prompt Few‑Shot (Exercițiul 3)
+
+INSTRUCȚIUNI PENTRU MODEL:  
+Analizează exemplele de mai jos (întrebare + răspuns) și învață stilul, structura și nivelul de detaliu. Folosește același tip de logică și format pentru a răspunde la întrebarea finală. Nu include recomandări medicale și nu inventa informații în afara contextului dat.
+
+---
+
+# EXEMPLUL 1
+
+Întrebare:  
+„Vreau un antrenament scurt pentru picioare, potrivit pentru un începător, folosind doar greutatea corpului.”
+
+Răspuns (model):  
+- Obiectiv: activare generală și întărirea musculaturii picioarelor.  
+- Durată: 15–20 minute.  
+- Exerciții:  
+  - Genuflexiuni – 3×12  
+  - Fandări alternative – 3×10/parte  
+  - Ridicări pe vârfuri – 3×15  
+  - Podul fesier – 3×12  
+- Recomandări: ritm controlat, pauze 60–90 secunde.
+
+---
+
+# EXEMPLUL 2
+
+Întrebare:  
+„Poți crea un antrenament pentru spate pentru cineva cu nivel mediu, care are acces la gantere?”
+
+Răspuns (model):  
+- Obiectiv: dezvoltarea forței și posturii.  
+- Echipament: gantere medii.  
+- Exerciții:  
+  - Ramat cu gantera – 4×10  
+  - Ridicări laterale pentru umeri – 3×12  
+  - Ramat la 45° – 3×10  
+  - Îndreptări românești cu gantere – 3×12  
+- Recomandări: menține spatele drept, respiră controlat.
+
+---
+
+ ÎNTREBAREA LA CARE TREBUIE SĂ RĂSPUNZI (MODEL):
+
+CONTEXT:  
+Utilizatorul este un adult sănătos, nivel începător‑mediu, care dorește un antrenament de forță pentru partea superioară a corpului. Are acces la o sală complet echipată și poate aloca 45 de minute.
+
+CERINȚĂ:  
+Generează un antrenament complet pentru partea superioară, respectând stilul și structura din exemple.
+
+FORMAT DE IEȘIRE:  
+- Obiectivul antrenamentului  
+- Echipament necesar  
+- Lista exercițiilor (5–6 exerciții) cu seturi și repetări  
+- Recomandări de execuție și ritm
+
+---
+
 
 
 ----------------------------------------------------------------
@@ -49,7 +162,55 @@ pentru a construi un plan de slăbire, cu format explicit.
 
 Prompt:
 
+Desigur, anca. Iată un prompt clar, complet și utilizabil, care cere modelului să gândească pas cu pas pentru a construi un plan de slăbire, cu toate elementele obligatorii incluse.
 
+---
+
+ Prompt Chain‑of‑Thought pentru Plan de Slăbire (Exercițiul 4)
+
+INSTRUCȚIUNI PENTRU MODEL:  
+Gândește pas cu pas pentru a construi un plan de slăbire realist și sustenabil.  
+1. Analizează obiectivele și constrângerile utilizatorului.  
+2. Identifică principiile generale necesare pentru slăbire sănătoasă.  
+3. Creează un plan săptămânal de activitate fizică adaptat contextului.  
+4. Oferă recomandări practice pentru alimentație și monitorizarea progresului.  
+Nu include sfaturi medicale și nu dezvălui procesul tău intern de raționament; prezintă doar concluziile finale, clare și utile.
+
+CONTEXT:  
+Utilizatorul este un adult sănătos, cu stil de viață sedentar, care dorește să slăbească treptat și să își îmbunătățească nivelul de energie. Are la dispoziție 4 zile pe săptămână pentru activitate fizică (30–45 minute/sesiune) și acces la:  
+- spațiu pentru mers/alergare în aer liber  
+- gantere ușoare  
+- saltea de antrenament acasă.  
+Scopul principal: pierdere în greutate graduală și creșterea condiției fizice.
+
+FORMAT DE IEȘIRE:  
+Structura răspunsului trebuie să fie următoarea:
+
+- 1. Clarificarea obiectivelor utilizatorului  
+  - 3–4 bullet points cu obiective concrete
+
+- 2. Principii generale pentru slăbire sănătoasă  
+  - 5–7 bullet points
+
+- 3. Plan de activitate fizică pe 7 zile  
+  - Pentru fiecare zi:  
+    - „Zi activă” sau „Zi de recuperare”  
+    - Pentru zilele active:  
+      - tipul de activitate (cardio, forță, mix)  
+      - 3–5 exerciții sau tipuri de activitate  
+      - durată și intensitate aproximativă
+
+- 4. Recomandări generale pentru alimentație  
+  - 4–6 bullet points
+
+- 5. Monitorizare și ajustare  
+  - 3–5 bullet points despre urmărirea progresului și ajustarea planului
+
+Tonul trebuie să fie prietenos, motivant și realist, iar răspunsul final să nu depășească 700 de cuvinte.
+
+---
+
+Dacă vrei, pot trece la exercițiul 5 sau pot ajusta promptul după preferințele tale.
 ----------------------------------------------------------------
 5. CHAIN OF THOUGHT + PERSONIFICARE
 ----------------------------------------------------------------
@@ -66,6 +227,50 @@ Creează un prompt care cere explorarea a minimum 3 soluții diferite
 pentru un plan de antrenament și alegerea celei mai bune, cu justificare.
 
 Prompt:
+INSTRUCȚIUNI PENTRU MODEL:  
+Acționează ca un specialist în fiziologia efortului, cu experiență în optimizarea compoziției corporale prin exercițiu fizic. Vreau să gândești pas cu pas și să îți explici raționamentul în mod clar, astfel încât utilizatorul să înțeleagă de ce propui fiecare recomandare.  
+1. Analizează datele de context.  
+2. Stabilește principiile fiziologice relevante (consum energetic, adaptări la efort, recuperare).  
+3. Construiește un plan de slăbire bazat pe aceste principii.  
+4. Leagă explicit fiecare recomandare de un mecanism fiziologic (de ex.: creșterea consumului energetic, menținerea masei musculare).  
+Nu oferi sfaturi medicale și nu inventa date în afara contextului.
+
+CONTEXT:  
+Utilizatorul este un adult sănătos, cu stil de viață predominant sedentar, care dorește să piardă în greutate într-un ritm moderat și să își îmbunătățească rezistența la efort. Are la dispoziție:  
+- 4 zile pe săptămână pentru antrenament (30–45 de minute/sesiune)  
+- acces la: bandă de alergare/alei pentru mers rapid, gantere ușoare‑medii, saltea de antrenament.  
+Obiectiv: reducerea treptată a masei grase, menținând sau îmbunătățind masa musculară și nivelul de energie.
+
+FORMAT DE IEȘIRE:  
+Răspunsul tău trebuie structurat astfel:
+
+- 1. Analiza inițială a situației utilizatorului  
+  - 3–5 bullet points cu principalele concluzii (nivel de activitate, obiectiv, constrângeri)
+
+- 2. Principii fiziologice cheie pentru slăbire  
+  - 5–7 bullet points  
+  - Pentru fiecare principiu:  
+    - explicație scurtă (ex.: „Deficit caloric moderat”)  
+    - de ce este important din punct de vedere fiziologic (ex.: „determină mobilizarea rezervelor de grăsime”)
+
+- 3. Plan de activitate fizică pe 7 zile  
+  - Pentru fiecare zi:  
+    - „Zi activă” sau „Zi de recuperare”  
+    - pentru zilele active:  
+      - tipul de efort (cardio de intensitate moderată, antrenament de forță, HIIT ușor etc.)  
+      - 3–5 exerciții sau tipuri de activitate  
+      - durată și intensitate aproximativă  
+      - scurtă explicație fiziologică (ex.: „crește consumul energetic post‑efort”, „stimulează menținerea masei musculare”)
+
+- 4. Recomandări generale privind alimentația și recuperarea  
+  - 4–6 bullet points  
+  - pentru fiecare, explică pe scurt mecanismul fiziologic (ex.: rolul proteinelor, somnului, hidratării)
+
+- 5. Sinteză a raționamentului  
+  - 3–5 bullet points care rezumă logica de ansamblu a planului:  
+    - cum se combină tipurile de efort  
+    - cum susțin recomandările adaptările fiziologice dorite  
+    - de ce planul este sustenabil pe termen mediu
 
 
 ----------------------------------------------------------------
@@ -75,7 +280,53 @@ Scrie un prompt în care modelul este personificat ca
 „consultant fitness” ce creaza un plan săptămânal și compară strategii diferite.
 
 Prompt:
+# Prompt Tree‑of‑Thought + Personificare „consultant fitness”
 
+INSTRUCȚIUNI PENTRU MODEL:  
+Acționează ca un consultant fitness cu experiență în planificarea antrenamentelor săptămânale pentru adulți sănătoși. Vreau să folosești un mod de gândire de tip „arbore de idei” (Tree of Thought):  
+1. Generează mai multe strategii posibile de organizare a antrenamentelor pe o săptămână (de ex.: full‑body, split pe grupe musculare, alternanță forță/cardio).  
+2. Pentru fiecare strategie, notează avantaje și dezavantaje.  
+3. Compară strategiile între ele și explică de ce una dintre ele este cea mai potrivită pentru contextul dat.  
+4. Abia apoi construiește planul săptămânal final, bazat pe strategia aleasă.  
+Nu oferi sfaturi medicale și nu inventa informații în afara contextului.
+
+CONTEXT:  
+Utilizatorul este un adult sănătos, nivel începător‑mediu, care dorește să îmbunătățească atât forța, cât și rezistența, fără obiective de performanță sportivă. Are la dispoziție:  
+- 4 zile pe săptămână pentru antrenament (45–60 de minute/sesiune)  
+- acces la sală de fitness (gantere, haltere, aparate, bandă de alergare, bicicletă).  
+Obiectiv: creșterea tonusului muscular, îmbunătățirea condiției fizice generale și menținerea unei greutăți corporale sănătoase.
+
+FORMAT DE IEȘIRE:  
+
+- 1. Analiza nevoilor utilizatorului  
+  - 3–5 bullet points cu concluzii despre obiective, timp disponibil, nivel și constrângeri
+
+- 2. Generarea strategiilor de antrenament (arbore de idei)  
+  - Prezintă cel puțin 3 strategii diferite de organizare a săptămânii (ex.: full‑body, upper/lower, forță + cardio alternat)  
+  - Pentru fiecare strategie:  
+    - Descriere scurtă  
+    - Avantaje – 2–4 bullet points  
+    - Dezavantaje/limitări – 2–3 bullet points  
+
+- 3. Compararea strategiilor și alegerea uneia  
+  - 3–5 bullet points în care:  
+    - compari strategiile între ele  
+    - explici de ce una este cea mai potrivită pentru contextul utilizatorului  
+
+- 4. Planul săptămânal final (bazat pe strategia aleasă)  
+  - Pentru fiecare din cele 4 zile de antrenament:  
+    - tipul ședinței (ex.: full‑body, upper, lower, forță + cardio)  
+    - 4–6 exerciții principale  
+    - seturi și repetări orientative  
+    - scurt comentariu despre scopul zilei (ex.: „accent pe forță”, „accent pe rezistență”)  
+
+- 5. Sinteză și recomandări de progresie  
+  - 4–6 bullet points despre:  
+    - cum poate fi progresat planul (greutăți, volum, intensitate)  
+    - ce semne indică faptul că strategia funcționează  
+    - când ar trebui reevaluat planul  
+
+Folosește un ton profesionist, dar prietenos, ca un consultant fitness care explică opțiunile și îl ajută pe utilizator să înțeleagă de ce planul ales are sens pentru el.
 
 ----------------------------------------------------------------
 8. PROMPT CHAINING
@@ -95,7 +346,60 @@ Scrie un prompt în care modelul explică raționamentul (Reason)
 pentru un antrenament săptămânal.
 
 Prompt:
+Desigur, anca — îți construiesc un prompt de tip Prompt Chaining, cu două etape clare și bine delimitate, exact cum ai cerut. Este formulat astfel încât modelul să știe ce să facă în fiecare etapă și să producă un rezultat coerent și structurat.
 
+---
+
+ Prompt Chaining – Analiză HIIT + Generare Plan Structurat
+
+INSTRUCȚIUNI PENTRU MODEL:  
+Vei lucra în două etape distincte, pe care trebuie să le respecți în ordine. Nu sări peste pași și nu combina etapele între ele.
+
+---
+
+ ETAPA 1 – Analiză antrenament HIIT
+
+Analizează conceptul de antrenament HIIT (High‑Intensity Interval Training) în contextul utilizatorului.  
+Include în analiză următoarele elemente:
+
+- definiția HIIT  
+- mecanismele principale (intervale, intensitate, recuperare)  
+- beneficii pentru condiția fizică și compoziția corporală  
+- limitări sau precauții pentru un adult sănătos, nivel începător‑mediu  
+- exemple scurte de structuri HIIT (fără a crea încă un plan complet)
+
+FORMAT DE IEȘIRE pentru ETAPA 1:  
+- 1. Ce este HIIT – 2–3 fraze  
+- 2. Cum funcționează – 3–5 bullet points  
+- 3. Beneficii – 4–6 bullet points  
+- 4. Limitări/precauții – 3–4 bullet points  
+- 5. Mini‑exemple de intervale HIIT – 2–3 exemple scurte
+
+---
+
+ ETAPA 2 – Generare plan structurat HIIT (pe baza analizei)
+
+Folosind concluziile din Etapa 1, creează un plan HIIT structurat pentru 3 zile/săptămână, adaptat unui adult sănătos, nivel începător‑mediu, cu acces la:  
+- bandă de alergare sau spațiu pentru alergare  
+- gantere ușoare  
+- saltea de antrenament.
+
+Planul trebuie să fie progresiv, clar și ușor de urmat.
+
+FORMAT DE IEȘIRE pentru ETAPA 2:  
+- 1. Obiectivele planului – 3–4 bullet points  
+- 2. Structura generală a săptămânii – 1 paragraf scurt  
+- 3. Planul pe zile (Ziua 1, Ziua 2, Ziua 3)  
+  - tipul sesiunii (cardio HIIT, HIIT cu greutăți, mix)  
+  - 4–6 exerciții/intervale  
+  - durată totală  
+  - intensitate recomandată  
+- 4. Recomandări de progresie – 3–5 bullet points  
+- 5. Sfaturi de siguranță și execuție – 3–4 bullet points
+
+---
+
+Dacă vrei, pot continua cu următorul exercițiu din set sau pot ajusta promptul pentru un alt tip de antrenament.
 
 ----------------------------------------------------------------
 10. MULTIMODAL PROMPTING + PERSONIFICARE
@@ -105,4 +409,33 @@ Formulează un prompt în care modelul este personificat ca
 și recomandă exerciții pe baza ei.
 
 Prompt:
+INSTRUCȚIUNI PENTRU MODEL:  
+Acționează ca un antrenor într-o sală de fitness, obișnuit să analizeze postura, execuția exercițiilor și echipamentele folosite de clienți. Privește cu atenție imaginea furnizată de utilizator și oferă recomandări personalizate. Nu oferi sfaturi medicale și nu face presupuneri care nu pot fi deduse vizual.
+
+CONTEXT:  
+Utilizatorul îți trimite o imagine în care apare fie el, fie o persoană care execută un exercițiu într-o sală de fitness (ex.: genuflexiune, împins la piept, ramat, plank etc.). Scopul este să primească feedback tehnic și sugestii de exerciții potrivite pentru nivelul și postura observată în imagine.
+
+CERINȚĂ:  
+Analizează imaginea și oferă recomandări de exerciții și ajustări tehnice, ca un antrenor profesionist.
+
+FORMAT DE IEȘIRE:  
+- 1. Observații vizuale principale  
+  - 3–5 bullet points despre postura, alinierea corpului, poziția echipamentului (doar ce se vede clar în imagine)
+
+- 2. Interpretarea antrenorului  
+  - 2–4 bullet points despre ce sugerează postura sau execuția (ex.: stabilitate, mobilitate, control)
+
+- 3. Recomandări de exerciții  
+  - 4–6 exerciții potrivite pentru obiectivul dedus din imagine  
+  - pentru fiecare exercițiu:  
+    - scopul lui (forță, stabilitate, mobilitate)  
+    - ce parte a execuției ajută să se îmbunătățească
+
+- 4. Ajustări tehnice sugerate  
+  - 3–5 bullet points cu corecții simple, clare și sigure
+
+- 5. Sugestii de progresie  
+  - 2–4 bullet points despre cum poate evolua utilizatorul în funcție de ceea ce se vede în imagine
+
+Tonul trebuie să fie profesionist, prietenos și motivant, ca al unui antrenor care oferă feedback constructiv.
 
